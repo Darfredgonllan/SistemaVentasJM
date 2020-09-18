@@ -1,0 +1,32 @@
+.overlay {
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.popup {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.popup .btn-cerrar-popup {
+    display: block;
+    text-align: right;
+    color: #BBBBBB;
+    transition: .3s ease all;
+}
+
+.popup form .contenedor-inputs input {
+    width: 70%;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.popup .btn-cerrar-popup:hover {
+    color: #000;
+}

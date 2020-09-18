@@ -1,0 +1,373 @@
+html {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* utilidades */
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* MENU */
+
+nav .items ul li .nav-link:hover {
+    color: #71B100 !important;
+}
+
+nav .titulo {
+    color: #fff!important;
+    font-family: 'PT Sans', sans-serif!important;
+    font-size: 35px;
+}
+
+nav .titulo span {
+    font-weight: 700!important;
+}
+
+
+/* Header : IMAGEN DE FONDO */
+
+.site-header {
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+
+.site-header.inicio {
+    background-image: url(../img/auto.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 60rem;
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-header {
+        text-align: left;
+    }
+}
+
+.contenido-header h1 {
+    color: #ffffff;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    line-height: 2;
+}
+
+
+/* CARRITO */
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu img:hover {
+    cursor: pointer;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    min-height: 400px;
+    min-width: 300px;
+}
+
+.submenu #carrito table tbody tr {
+    border-top: 1px solid #ccc;
+}
+
+.submenu #carrito table thead tr th {
+    padding: 15px;
+}
+
+.submenu #carrito a {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 400;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 7px;
+    color: #555;
+    font-weight: 600;
+}
+
+.carrito {
+    margin-top: 10px;
+}
+
+.carrito ul li {
+    text-align: center;
+}
+
+.lista-pedido:hover {
+    background-color: rgb(243, 240, 240);
+    font-weight: 700;
+}
+
+
+/** Iconos **/
+
+@media (min-width: 768px) {
+    .iconos-nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.icono {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .icono {
+        flex-basis: calc(33.3% - 1rem);
+    }
+}
+
+.icono h3 {
+    text-transform: uppercase;
+}
+
+
+/* BUSCAR PRODUCTO Y TITULO */
+
+@media (max-width: 683px) {
+    .container-fluid div div .titulo {
+        margin: auto!important;
+    }
+    .container-fluid div div form {
+        margin: auto!important;
+    }
+}
+
+
+/* TABLA DE PRODUCTOS */
+
+.tabla {
+    padding: 20px;
+}
+
+.tabla .card,
+.row .card {
+    position: relative;
+    overflow: hidden;
+}
+
+.tabla .card a img,
+.row .card a img {
+    max-width: 100%;
+    border-radius: 2px;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+.tabla .card a img:hover,
+.row .card a img:hover {
+    -webkit-transform: scale(1.2);
+}
+
+.tabla .card .card-body p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.tabla .card .card-body .nombre,
+.row .card .card-body .nombre {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.tabla .card .card-body .precio {
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #001F3F;
+}
+
+.row .card .card-body .nombre,
+.row .card .card-body .marca,
+.row .card .card-body .descripcion,
+.row .card .card-body #precio {
+    font-size: 20px;
+}
+
+.row .card .card-body #precio {
+    font-weight: 700;
+    color: #1d4231;
+    text-align: center;
+    border: none;
+}
+
+.row .stock span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #001F3F;
+}
+
+.row form {
+    text-align: center;
+    padding: 30px!important;
+}
+
+@media (max-width: 500px) {
+    .container-fluid div div form button {
+        font-weight: 400;
+        font-size: 13px;
+    }
+}
+
+.container-fluid div div form {
+    padding: 70px!important;
+}
+
+@media (max-width: 500px) {
+    .container-fluid div div form {
+        padding: 30px!important;
+    }
+}
+
+.container-fluid div div form div label {
+    font-size: 20px;
+}
+
+.container-fluid div form .stock {
+    font-size: 23px;
+}
+
+@media (max-width: 500px) {
+    .container-fluid div div form div label,
+    .container-fluid div div form div .stock {
+        font-size: 17px;
+    }
+}
+
+
+/* DESCRIPCION PRODUCTO */
+
+.container-fluid div div form div input[type="submit"] {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 10px;
+}
+
+.container-fluid div div form div .div-subtotal .subtotal {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    color: #485a29;
+    font-weight: 900;
+    margin: auto;
+}
+
+
+/* LISTA PEDIDO */
+
+.container-fluid .btnEnviarPedido {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* @media (max-width: 500px) {
+    .botonEnviarPedido button {
+        padding: 20px;
+        width: 100%;
+    }
+} */
+
+.container-fluid .detCliente {
+    padding: 20px;
+    margin: 0px!important;
+}
+
+.container-fluid .detCliente .tituloDetalleCliente {
+    font-size: 23px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    margin: auto;
+    text-align: center;
+    border-bottom: 2px solid #423c3c;
+}
+
+.container-fluid .detCliente .informacion {
+    padding-top: 20px;
+}
+
+.container-fluid .detCliente .informacion {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container-fluid .detCliente .informacion span {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.container-fluid table tbody tr:hover {
+    background-color: #ece3e3;
+}
+
+.container-fluid table tbody .ultimo-elemento:hover {
+    background-color: white;
+}
+
+
+/* reporteGenPedidos */
+
+.tabla-pedido thead tr {
+    font-size: 17px;
+}
+
+
+/* .tabla-pedido tbody tr:hover {
+    background: #506e9b;
+    color: white;
+} */
+
+.tabla-pedido {
+    font-family: 'Lato', sans-serif;
+}
+
+
+/*PAGINACION*/
+
+div nav ul {
+    margin-bottom: 0!important;
+}
